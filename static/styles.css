@@ -1,38 +1,56 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.form-container {
+h1 {
     text-align: center;
-    margin: 20px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+#stock-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#stock-form label {
+    font-weight: bold;
+}
+
+#stock-form select,
+#stock-form input[type="date"],
+#stock-form button {
+    padding: 8px;
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#stock-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.chart-container {
-    position: relative;
-    width: 90vw; /* 90% of viewport width */
-    max-width: 1200px; /* Max width for large screens */
-    height: 70vh; /* 70% of viewport height */
-    max-height: 600px; /* Max height to prevent overflow */
-    margin: 20px auto;
-    border: 1px solid #ccc; /* Visible border for debugging */
+#stock-form button:hover {
+    background-color: #45a049;
 }
 
-#stockChart {
-    width: 90% !important;
-    height: 90% !important;
+#chart-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#chart-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+#chart-container p {
+    color: #555;
+    font-style: italic;
 }

@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')  # Set non-interactive backend for server-side rendering
+
 from flask import Flask, render_template, request, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -72,7 +75,7 @@ def get_chart():
     try:
         ticker = request.args.get('ticker')
         date = request.args.get('date')
-        logging.debug(f"Received request: ticker={ticker}, date={date}, raw query: {request.args}")
+        logging.debug(f"Processing chart request for ticker={ticker}, date={date}, raw query: {request.args}")
         logging.debug(f"Request URL: {request.url}")
 
         if not ticker or not date:

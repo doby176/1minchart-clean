@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>1-Minute Stock Chart</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/styles.css?v=1">
 </head>
 <body>
     <h1>1-Minute Stock Chart</h1>
@@ -16,7 +16,9 @@
         <input type="date" id="date" name="date">
         <button type="submit">Load Chart</button>
     </form>
-    <div id="chart-container"></div>
-    <script src="/static/script.js"></script>
+    <div id="chart-container">
+        <p>Select a ticker and date to load the chart.</p>
+    </div>
+    <script src="/static/script.js?v=1"></script>
 </body>
 </html>
