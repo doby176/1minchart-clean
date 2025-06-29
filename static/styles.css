@@ -1,56 +1,153 @@
+/* Reset default margins and use Roboto font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 1200px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1 {
+/* Header */
+header {
+    background-color: #1a3c6e; /* Dark blue for professional look */
+    color: white;
+    padding: 20px;
     text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+/* Main content card */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
 #stock-form {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Responsive for smaller screens */
 }
 
 #stock-form label {
-    font-weight: bold;
+    font-weight: 700;
+    color: #1a3c6e;
 }
 
 #stock-form select,
 #stock-form input[type="date"],
 #stock-form button {
-    padding: 8px;
+    padding: 12px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#stock-form select:focus,
+#stock-form input[type="date"]:focus {
+    border-color: #1a3c6e;
 }
 
 #stock-form button {
-    background-color: #4CAF50;
+    background-color: #1a3c6e;
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: 700;
+    padding: 12px 24px;
 }
 
 #stock-form button:hover {
-    background-color: #45a049;
+    background-color: #15305b;
 }
 
+/* Chart container */
 #chart-container {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 
 #chart-container img {
     max-width: 100%;
+    width: 1200px; /* Larger chart width */
     height: auto;
     border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #chart-container p {
-    color: #555;
+    color: #666;
     font-style: italic;
+    font-size: 1.1em;
+}
+
+/* AdSense container */
+.ads-container {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #1a3c6e;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #stock-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #stock-form select,
+    #stock-form input[type="date"],
+    #stock-form button {
+        width: 100%;
+    }
+
+    #chart-container img {
+        width: 100%;
+    }
+
+    .card {
+        padding: 20px;
+    }
 }
